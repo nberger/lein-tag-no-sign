@@ -1,22 +1,35 @@
 # lein-tag-no-sign
 
-A Leiningen plugin to provide a non-signing variant of vcs tag.
+A Leiningen plugin to provide a non-signing alternative to vcs tag task.
+
+Leiningen's default `vcs tag` task uses `git tag -s` to create a signed tag. That's cool for many projects, but other projects doesn't need to sign their tags.
+There are a couple of (reported)[https://github.com/technomancy/leiningen/issues/1873] (issues)[https://github.com/technomancy/leiningen/issues/1799] on leiningen about this, but no one took the step to fix it yet.
+
+This plugin is an easy way to have this working now, and also a great exercise for me to create a leiningen plugin :)
 
 ## Usage
 
-FIXME: Use this for user-level plugins:
+Put `[lein-tag-no-sign "0.1.0"]` into the `:plugins` vector of your project.clj.
 
-Put `[lein-tag-no-sign "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your
-`:user` profile, or if you are on Leiningen 1.x do `lein plugin install
-lein-tag-no-sign 0.1.0-SNAPSHOT`.
+The behavior of the tag-no-sign task mimics the `vcs tag` task, except that it doesn't try to sign the tag.
 
-FIXME: Use this for project-level plugins:
-
-Put `[lein-tag-no-sign "0.1.0-SNAPSHOT"]` into the `:plugins` vector of your project.clj.
-
-FIXME: and add an example usage that actually makes sense:
+You can call it from the command line
 
     $ lein tag-no-sign
+
+Or most probably you could use it as part of your customized release-tasks in your project.clj:
+
+```clojure
+  :release-tasks [["vcs" "assert-committed"]
+                  ["change" "version"
+                   "leiningen.release/bump-version" "release"]
+                  ["vcs" "commit"]
+                  ["tag-no-sign"]
+                  ["uberjar"]]
+```
+
+See leiningen doc (Overriding the default :release-tasks)[https://github.com/technomancy/leiningen/blob/master/doc/DEPLOY.md#overriding-the-default-release-tasks] for more info.
+
 
 ## License
 
