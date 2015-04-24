@@ -6,7 +6,7 @@
   :scm {:name "git"
         :url "https://github.com/nberger/lein-tag-no-sign.git"}
 
-  :plugins [[lein-tag-no-sign "0.1.0-SNAPSHOT"]]
+  :plugins [[lein-tag-no-sign "0.1.0"]]
 
   :release-tasks [["vcs" "assert-committed"]
                   ["change" "version"
