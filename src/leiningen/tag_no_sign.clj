@@ -1,3 +1,4 @@
+; Based on https://github.com/technomancy/leiningen/blob/master/src/leiningen/vcs.clj#L62
 (ns leiningen.tag-no-sign
   (:require [leiningen.core.eval :as eval]))
 
