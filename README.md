@@ -2,10 +2,9 @@
 
 A Leiningen plugin to provide a non-signing alternative to vcs tag task.
 
-Leiningen's default `vcs tag` task uses `git tag -s` to create a signed tag. That's cool for many projects, but other projects doesn't need to sign their tags.
-There are a couple of (reported)[https://github.com/technomancy/leiningen/issues/1873] (issues)[https://github.com/technomancy/leiningen/issues/1799] on leiningen about this, but no one took the step to fix it yet.
+Leiningen's default `vcs tag` task uses `git tag -s` to create a signed tag. That's cool for many projects, but some others do not need or want to sign their tags. There are a couple of [reported](https://github.com/technomancy/leiningen/issues/1873) [issues](https://github.com/technomancy/leiningen/issues/1799) on leiningen asking about this, but no one took the step to fix it yet.
 
-This plugin is an easy way to have this working now, and also a great exercise for me to create a leiningen plugin :)
+This plugin is an easy way (ugly hack?) to have this working now, and also a great exercise for me to create a leiningen plugin :)
 
 ## Usage
 
