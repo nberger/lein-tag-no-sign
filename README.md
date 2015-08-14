@@ -27,7 +27,7 @@ Or most probably you could use it as part of your customized release-tasks in yo
                   ["uberjar"]]
 ```
 
-See leiningen doc (Overriding the default :release-tasks)[https://github.com/technomancy/leiningen/blob/master/doc/DEPLOY.md#overriding-the-default-release-tasks] for more info.
+See the leiningen doc about [Overriding the default :release-tasks](https://github.com/technomancy/leiningen/blob/master/doc/DEPLOY.md#overriding-the-default-release-tasks) for more info.
 
 
 ## License
