@@ -1,3 +1,5 @@
+# DEPRECATION NOTICE: This plugin is deprecated since the release of Leiningen 2.5.3 which added this option to the vcs tag task.  
+
 # lein-tag-no-sign
 
 A Leiningen plugin to provide a non-signing alternative to vcs tag task.
